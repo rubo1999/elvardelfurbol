@@ -103,20 +103,20 @@ header nav ul li i{
 }
 .contenedorNoticias .noticias section p{
     position: absolute;
-    bottom: 15%;
-    left: 15%;
-    font-size: 1.5rem;
-    font-weight: 700;
-    background-color: black;
-    width: 250px;
-    color: white;
+    bottom: 5%;
+    left: 10%;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background-image: linear-gradient(to right, #87CEEB, #FFFFFF);
     padding: 15px;
+    width: 200px;
+    border-radius: 5px;
 }
 .contenedorNoticias button{
     position: absolute;
     top: 40%;
     border-radius: 50%;
-    font-size: 5rem;
+    font-size: 4rem;
     color: white;
 }
 .contenedorNoticias button:hover{
@@ -132,8 +132,8 @@ header nav ul li i{
     width: 25%;
 }
 .partidos section img{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 .partidos h3{
     font-size: 1.5rem;
@@ -246,10 +246,10 @@ header nav ul li i{
     }
     .contenedorPrincipal{
         flex-direction: column-reverse;
-        height: 100%;
     }
     .contenedorPrincipal .contenedorNoticias{
         width: 100%;
+        height: 100%
     }
     .partidos{
         width: 100%;
