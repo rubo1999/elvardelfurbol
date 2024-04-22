@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    font-size: 14px;
+    --naranja: #F3AD41;
+    --verde: #378575;
+    --negro: #122939;
+    --azul: #0BC0DF;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+button{
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+}
+.descripcion{
+    background-color: var(--azul);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.descripcion h1{
+    font-size: 2.5rem;
+}
+.descripcion h2{
+    width: 500px;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.apertura, .cierre{
+    display: none;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 150px;
+    height: 150px;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 20px;
+}
+header nav ul li{
+    display: flex;
+    align-items: center;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+header nav ul li img{
+    width: 50px;
+    height: 50px;
+}
+header nav ul li i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.seleccionado{
+    text-decoration: underline 3px solid var(--azul);
+    text-decoration-skip-ink: none; 
+    /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
+}
+.contenedorPrincipal{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+    height: 500px;
+}
+.contenedorNoticias{
+    width: 65%;
+    overflow: hidden;
+    position: relative;
+}
+.contenedorNoticias .noticias{
+    display: flex;
+    width: 300%;
+    height: 100%;
+}
+.contenedorNoticias .noticias section{
+    position: relative;
+    width: 100%;
+}
+.contenedorNoticias .noticias section img{
+    width: 100%;
+    height: 100%;
+}
+.contenedorNoticias .noticias section p{
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: black;
+    width: 250px;
+    color: white;
+    padding: 15px;
+}
+.contenedorNoticias button{
+    position: absolute;
+    top: 40%;
+    border-radius: 50%;
+    font-size: 5rem;
+    color: white;
+}
+.contenedorNoticias button:hover{
+    background-color: var(--azul);
+}
+.anterior{
+    left: 25px;
+}
+.siguiente{
+    right: 25px
+}
+.partidos{
+    width: 25%;
+}
+.partidos section img{
+    width: 60px;
+    height: 60px;
+}
+.partidos h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+.partidos section{
+    margin-bottom: 20px;
+}
+.partidos section p{
+    text-align: center;
+    font-size: 1.2rem;
+}
+.partidos section .info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.partidos section i{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.conjuntoNoticias{
+    padding: 10px;
+}
+.infoEquipo{
+    display: flex;
+    align-items: center;
+}
+.infoEquipo img{
+    width: 75px;
+    height: 75px;
+}
+.infoEquipo h3{
+    font-size: 1.5rem;
+}
+.noticiasEquipo{
+    margin: 0 auto;
+    width: calc(100% - 50px);
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, auto);
+}
+.noticiasEquipo section{
+    position: relative;
+}
+.noticiasEquipo section p{
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    padding: 15px;
+    background-color: var(--azul);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 15px;
+}
+.noticiasEquipo section img{
+    width: 100%;
+    height: 300px;
+}
+@media screen and (max-width:900px){
+    .descripcion h2{
+        display: none;
+    }
+    .apertura, .cierre{
+        display: block;
+        font-size: 3rem;
+    }
+    .cierre{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    header{
+        margin-bottom: 20px;
+    }
+    header nav{
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        padding: 20px;
+        background-color: var(--negro);
+        width:calc(50% - 40px);
+        height: calc(100vh - 40px);
+        background-color: var(--naranja);
+        transition: left 1s;
+        z-index: 1;
+    }
+    .desplegado{
+        left: 0;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li a{
+        font-size: 1.3rem;
+    }
+    header nav ul li:nth-child(5){
+        margin-bottom: 35px;
+    }
+    nav ul li:not(:last-child){
+        margin-bottom: 25px;
+    }
+    header nav ul li i{
+        margin-right: 20px;
+    }
+    header nav ul li:nth-child(5), header nav ul li:nth-child(6){
+        margin-left: 5px;
+    }
+    .contenedorPrincipal{
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .contenedorPrincipal .contenedorNoticias{
+        width: 100%;
+    }
+    .partidos{
+        width: 100%;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        grid-template-rows: repeat(1, auto);
+    }
+    .partidos section p:last-child{
+        display: none;
+    }
+    .partidos h3{
+        display: none;
+    }
+    .noticiasEquipo{
+        grid-template-columns: repeat(2,auto);
+    }.partidos{
+        grid-template-columns: repeat(4,auto);
+    }
+}
+@media screen and (max-width:600px){
+    .noticiasEquipo{
+        grid-template-columns: repeat(1,auto);
+    }
+    .partidos{
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-around;
+    }
+}
