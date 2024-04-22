@@ -188,8 +188,16 @@ header nav ul li i{
     padding: 15px;
     background-color: var(--azul);
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 15px;
+}
+.noticiasEquipo section h3{
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 5px 0 5px 0;
+}
+.noticiasEquipo section h4{
+    font-weight: 400;
 }
 .noticiasEquipo section img{
     width: 100%;
