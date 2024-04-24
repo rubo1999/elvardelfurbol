@@ -164,6 +164,7 @@ header nav ul li i{
 .infoEquipo{
     display: flex;
     align-items: center;
+    margin: 5px 0 5px 15px;
 }
 .infoEquipo img{
     width: 75px;
