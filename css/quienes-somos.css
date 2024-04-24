@@ -71,9 +71,102 @@ header nav ul li i{
     font-size: 30px;
     margin-right: 10px;
 }
-
 .seleccionado{
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
+}
+.quienesSomos{
+    width: 90%;
+    margin: 0 auto;
+}
+.introduccion{
+    margin-bottom: 25px;
+}
+.introduccion p, .integrantes section p{
+    font-size: 1.1rem;
+}
+.introduccion p:not(:last-child){
+    margin-bottom: 10px;
+}
+.quienesSomos h3{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+.integrantes{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+}
+.integrantes section .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.integrantes section h4{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.integrantes section img{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+@media screen and (max-width: 1200px){
+    .integrantes{
+        grid-template-columns: repeat(2, auto);
+    }
+}
+@media screen and (max-width:900px){
+    header{
+        margin-bottom: 15px;
+    }
+    .descripcion h2{
+        display: none;
+    }
+    .apertura, .cierre{
+        display: block;
+        font-size: 3rem;
+    }
+    .cierre{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    header nav{
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        padding: 20px;
+        background-color: var(--negro);
+        width:calc(50% - 40px);
+        height: calc(100vh - 40px);
+        background-color: var(--naranja);
+        transition: left 1s;
+        z-index: 1;
+    }
+    .desplegado{
+        left: 0;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li a{
+        font-size: 1.3rem;
+    }
+    header nav ul li:nth-child(5){
+        margin-bottom: 35px;
+    }
+    nav ul li:not(:last-child){
+        margin-bottom: 25px;
+    }
+    header nav ul li i{
+        margin-right: 20px;
+    }
+    header nav ul li:nth-child(5), header nav ul li:nth-child(6){
+        margin-left: 5px;
+    }
+    .integrantes{
+        grid-template-columns: repeat(1, auto);
+    }
 }
