@@ -86,6 +86,7 @@ header nav ul li i{
 .contenedorNoticias{
     width: 65%;
     overflow: hidden;
+    height: 100%;
     position: relative;
 }
 .contenedorNoticias .noticias{
@@ -104,7 +105,7 @@ header nav ul li i{
 .contenedorNoticias .noticias section p{
     position: absolute;
     bottom: 5%;
-    left: 10%;
+    left: 5%;
     font-size: 1.3rem;
     font-weight: 600;
     background-image: linear-gradient(to right, #87CEEB, #FFFFFF);
@@ -112,12 +113,15 @@ header nav ul li i{
     width: 200px;
     border-radius: 5px;
 }
-.contenedorNoticias button{
+.contenedorNoticias  button{
     position: absolute;
-    top: 40%;
+    width: 100px;
+    height: 100px;
+    top: 35%;
     border-radius: 50%;
     font-size: 4rem;
     color: white;
+    cursor: pointer;
 }
 .contenedorNoticias button:hover{
     background-color: var(--azul);
@@ -264,10 +268,8 @@ header nav ul li i{
     .partidos{
         width: 100%;
         display: grid;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
         grid-template-rows: repeat(1, auto);
+        justify-content: space-between;
     }
     .partidos section p:last-child{
         display: none;

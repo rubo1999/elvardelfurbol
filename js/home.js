@@ -8,8 +8,6 @@ botonesNav.forEach(boton => {
 })
 
 const equipos = document.querySelectorAll("header nav ul li a");
-const menu = document.querySelector("header nav ul");
-const seleccionado = document.getElementsByClassName("desplegado");
 
 equipos.forEach(equipo => {
     equipo.addEventListener("mouseover", () => {
@@ -72,6 +70,3 @@ function movimiento(){
 function transicion(){
     slider.style.transition = "ease 1s"
 }
-
-
-
