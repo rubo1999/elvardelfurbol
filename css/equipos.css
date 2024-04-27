@@ -76,6 +76,9 @@ header nav ul li i{
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
+.click{
+    background-color: var(--verde);
+}
 .contenedorPrincipal{
     width: 90%;
     display: flex;

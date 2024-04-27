@@ -57,3 +57,25 @@ function movimiento(){
 function transicion(){
     carrusel.style.transition = "ease 1s";
 }
+
+
+const opciones = document.querySelectorAll("header nav ul li a");
+
+function click(link) {
+    opciones.forEach((i) => i.classList.remove("seleccionado"));
+    link.classList.add("seleccionado");
+}
+
+opciones.forEach((link) => {
+    link.addEventListener("click", () => click(link));
+})
+
+const currentURL = window.location.pathname;
+opciones.forEach((link) => {
+    const href = link.getAttribute("href");
+    if(currentURL.includes(href)){
+        link.classList.add("seleccionado");
+    }
+})
+
+

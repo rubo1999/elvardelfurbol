@@ -7,18 +7,23 @@ botonesNav.forEach(boton => {
     })
 })
 
-const equipos = document.querySelectorAll("header nav ul li a");
+const opciones = document.querySelectorAll("header nav ul li a");
 
-equipos.forEach(equipo => {
-    equipo.addEventListener("mouseover", () => {
-        equipo.classList.add("seleccionado");
-    })
-    equipo.addEventListener("mouseout", () => {
-        equipo.classList.remove("seleccionado");
-    })
-    equipo.addEventListener("click", () => {
-        equipo.classList.add("seleccionado");
-    })
+function click(link) {
+    opciones.forEach((i) => i.classList.remove("seleccionado"));
+    link.classList.add("seleccionado");
+}
+
+opciones.forEach((link) => {
+    link.addEventListener("click", () => click(link));
+})
+
+const currentURL = window.location.pathname;
+opciones.forEach((link) => {
+    const href = link.getAttribute("href");
+    if(currentURL.includes(href)){
+        link.classList.add("seleccionado");
+    }
 })
 
 const botonDcha = document.querySelector(".derecha");
