@@ -257,28 +257,6 @@ footer .apartados .rrss i{
 }
 .derechos p{
     text-align: center;
-    margin-bottom: 35px;
-}
-.resultados{
-    background-color: var(--negro);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-}
-.resultados p{
-    font-size: 1.2rem;
-    color: white;
-    white-space: nowrap;
-    animation: desplazar 12s linear infinite;
-}
-@keyframes desplazar{
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
 }
 @media screen and (max-width:900px){
     .descripcion h2{
