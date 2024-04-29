@@ -12,12 +12,13 @@
 body{
     font-family: "Montserrat", sans-serif;
 }
-button, input{
+button{
     -webkit-appearance: none;
     appearance: none;
     border: none;
     background-color: transparent;
     font-family: "Montserrat", sans-serif;
+    cursor: pointer;
 }
 .descripcion{
     background-color: var(--azul);
@@ -71,9 +72,120 @@ header nav ul li i{
     font-size: 30px;
     margin-right: 10px;
 }
-
 .seleccionado{
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
+}
+.comprarEdiciones{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.infoCompra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.infoCompra h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.infoCompra .carrito{
+    font-size: 2.5rem;
+}
+.periodicos{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    width: 134%;
+}
+.periodicos section{
+    text-align: center;
+    border: 2px solid var(--verde);
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 10%;
+}
+.periodicos img{
+    width: 100%;
+}
+.anterior, .siguiente{
+    position: fixed;
+    top: 50vh;
+    transform: translateY(-50%);
+    font-size: 3rem;
+}
+.anterior{
+    left: 10px;
+}
+.siguiente{
+    right: 10px;
+}
+.periodicos section button{
+    font-size: 1.3rem;
+    background-color: var(--naranja);
+    padding: 10px;
+    font-weight: 600;
+}
+.periodicos section button i{
+    margin-left: 15px;
+}
+@media screen and (max-width:900px){
+    header{
+        margin-bottom: 15px;
+    }
+    .descripcion h2{
+        display: none;
+    }
+    .apertura, .cierre{
+        display: block;
+        font-size: 3rem;
+    }
+    .cierre{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    header nav{
+        position: fixed;
+        top: 0;
+        left: -100vw;
+        padding: 20px;
+        background-color: var(--negro);
+        width:calc(50% - 40px);
+        height: calc(100vh - 40px);
+        background-color: var(--naranja);
+        transition: left 1s;
+        z-index: 1;
+    }
+    .desplegado{
+        left: 0;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav ul li a{
+        font-size: 1.3rem;
+    }
+    header nav ul li:nth-child(5){
+        margin-bottom: 35px;
+    }
+    nav ul li:not(:last-child){
+        margin-bottom: 25px;
+    }
+    header nav ul li i{
+        margin-right: 20px;
+    }
+    header nav ul li:nth-child(5), header nav ul li:nth-child(6){
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width: 800px){
+    .infoCompra{
+        display: block;
+    }
 }

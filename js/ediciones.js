@@ -26,3 +26,4 @@ opciones.forEach((link) => {
         link.classList.add("seleccionado");
     }
 })
+
