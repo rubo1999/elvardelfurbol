@@ -301,7 +301,7 @@ header nav ul li i{
 }
 
 @media (hover:none){
-    .contenedorNoticias button:hover{
+    .contenedorNoticias button{
         background-color: var(--azul);
     }
 }
