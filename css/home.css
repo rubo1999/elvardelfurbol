@@ -63,6 +63,10 @@ header nav ul li a{
     font-size: 1.1rem;
     font-weight: 400;
 }
+header nav ul li a:hover{
+    text-decoration: underline 3px solid var(--azul);
+    text-decoration-skip-ink: none;
+}
 header nav ul li img{
     width: 50px;
     height: 50px;
@@ -108,12 +112,12 @@ header nav ul li i{
 }
 .contenedorSlider button{
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    top: 50%;
+    top: 40%;
     color: white;
-    font-size: 5rem;
+    font-size: 3.5rem;
     cursor: pointer;
 }
 .derecha{
@@ -215,13 +219,13 @@ input[type="text"], input[type="submit"]{
     font-weight: 700;
 }
 input[type="text"]:focus-visible{
-    outline: 3px solid var(--verde);
+    outline: 3px solid var(--azul);
 }
 input[type="submit"]{
     cursor: pointer;
 }
 input[type="submit"]:hover{
-    background-color: var(--azul);
+    background-color: var(--naranja);
 }
 footer{
     background-color: var(--naranja);

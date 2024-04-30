@@ -64,6 +64,10 @@ header nav ul li a{
     font-size: 1.1rem;
     font-weight: 400;
 }
+header nav ul li a:hover{
+    text-decoration: underline 3px solid var(--azul);
+    text-decoration-skip-ink: none;
+}
 header nav ul li img{
     width: 50px;
     height: 50px;
@@ -94,45 +98,66 @@ header nav ul li i{
     margin-bottom: 15px;
 }
 .infoCompra .carrito{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .periodicos{
-    display: grid;
-    grid-template-columns: repeat(4,auto);
-    transition: transform 0.5s ease-in-out;
-    transform: translateX(0);
+    display: flex;
     width: 134%;
 }
 .periodicos section{
+    width: calc(100% / 3 - 15%);
     text-align: center;
-    border: 2px solid var(--verde);
-    border-radius: 10px;
-    padding: 15px;
-    margin-right: 10%;
+    margin-left: 5%;
 }
-.periodicos img{
-    width: 100%;
+.periodicos section:nth-child(3){
+    margin-right: 5px;
 }
-.anterior, .siguiente{
-    position: fixed;
-    top: 50vh;
-    transform: translateY(-50%);
-    font-size: 3rem;
-}
-.anterior{
-    left: 10px;
-}
-.siguiente{
-    right: 10px;
+.periodicos section h4{
+    font-size: 1.4rem;
+    margin: 10px 0;
 }
 .periodicos section button{
-    font-size: 1.3rem;
-    background-color: var(--naranja);
-    padding: 10px;
+    font-size: 1.2rem;
     font-weight: 600;
+    padding: 10px;
+    background-color: var(--naranja);
 }
-.periodicos section button i{
-    margin-left: 15px;
+.periodicos section i{
+    margin-left: 10px;
+}
+.periodicos section img{
+    width: 100%; 
+    display: block;
+}
+.anterior, .siguiente{
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    border-radius: 20px;
+}
+.anterior:hover, .siguiente:hover{
+    background-color: var(--azul);
+}
+.anterior{
+    left: 0;
+}
+.siguiente{
+    right: 0;
+}
+.infoPeriodicos{
+   width: 90%;
+   margin: 20px auto; 
+}
+.infoPeriodicos h3{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.infoPeriodicos p{
+    font-size: 1.1rem;
+}
+.infoPeriodicos p:not(:last-child){
+    margin-bottom: 10px;
 }
 @media screen and (max-width:900px){
     header{
@@ -184,8 +209,16 @@ header nav ul li i{
         margin-left: 5px;
     }
 }
-@media screen and (max-width: 800px){
-    .infoCompra{
-        display: block;
+@media screen and (max-width:500px){
+    .periodicos h4{
+        font-size: 1.2rem;
+    }
+    .periodicos section button{
+        font-size: 1.1rem;
+        padding: 5px;
+    }
+    .anterior, .siguiente{
+        font-size: 2rem;
+        padding: 0;
     }
 }

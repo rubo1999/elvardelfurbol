@@ -9,6 +9,7 @@ botonesNav.forEach(boton => {
 
 const opciones = document.querySelectorAll("header nav ul li a");
 
+
 function click(link) {
     opciones.forEach((i) => i.classList.remove("seleccionado"));
     link.classList.add("seleccionado");

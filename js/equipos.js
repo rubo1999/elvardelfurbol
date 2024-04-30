@@ -58,8 +58,8 @@ function transicion(){
     carrusel.style.transition = "ease 1s";
 }
 
-
 const opciones = document.querySelectorAll("header nav ul li a");
+
 
 function click(link) {
     opciones.forEach((i) => i.classList.remove("seleccionado"));
