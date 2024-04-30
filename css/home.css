@@ -75,7 +75,6 @@ header nav ul li i{
     font-size: 30px;
     margin-right: 10px;
 }
-
 .seleccionado{
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none; 
@@ -121,10 +120,10 @@ header nav ul li i{
     cursor: pointer;
 }
 .derecha{
-    right: 25px;
+    right: 15px;
 }
 .izquierda{
-    left: 25px;
+    left: 15px;
 }
 .derecha:hover, .izquierda:hover{
     background-color: var(--azul);

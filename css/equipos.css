@@ -120,10 +120,10 @@ header nav ul li i{
     width: 200px;
     border-radius: 5px;
 }
-.contenedorNoticias  button{
+.contenedorNoticias button{
     position: absolute;
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     top: 40%;
     border-radius: 50%;
     font-size: 3rem;
@@ -134,10 +134,10 @@ header nav ul li i{
     background-color: var(--azul);
 }
 .anterior{
-    left: 25px;
+    left: 10px;
 }
 .siguiente{
-    right: 25px
+    right: 10px;
 }
 .partidos{
     width: 25%;
@@ -297,5 +297,11 @@ header nav ul li i{
     .partidos{
         grid-template-columns: repeat(2, auto);
         justify-content: space-around;
+    }
+}
+
+@media (hover:none){
+    .contenedorNoticias button:hover{
+        background-color: var(--azul);
     }
 }
