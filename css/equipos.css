@@ -290,6 +290,11 @@ header nav ul li i{
         grid-template-columns: repeat(4,auto);
     }
 }
+@media screen and (max-width:800px){
+    .contenedorNoticias button{
+        background-color: var(--azul);
+    }
+}
 @media screen and (max-width:600px){
     .noticiasEquipo{
         grid-template-columns: repeat(1,auto);
@@ -297,11 +302,5 @@ header nav ul li i{
     .partidos{
         grid-template-columns: repeat(2, auto);
         justify-content: space-around;
-    }
-}
-
-@media (hover:none){
-    .contenedorNoticias button{
-        background-color: var(--azul);
     }
 }

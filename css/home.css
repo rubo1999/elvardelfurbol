@@ -83,7 +83,7 @@ header nav ul li i{
 .contenedorSlider{
     position: relative;
     overflow: hidden;
-    height: 400px;
+    height: 550px;
 }
 .slider{
     width: 400%;
@@ -319,8 +319,11 @@ footer .apartados .rrss i{
     .europa{
         margin-bottom: 20px;
     }
+    .contenedorSlider button{
+        background-color: var(--azul);
+    }
 }
-@media screen and(max-width:600px){
+@media screen and (max-width:500px){
     .contenedorSlider{
         height: 400px;
     }
