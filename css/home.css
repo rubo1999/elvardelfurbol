@@ -326,7 +326,7 @@ footer .apartados .rrss i{
 }
 @media screen and (max-width:500px){
     .contenedorSlider{
-        height: 400px;
+        height: 300px;
     }
     header nav{
         width: calc(60% - 40px);
