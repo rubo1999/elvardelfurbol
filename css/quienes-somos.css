@@ -130,12 +130,12 @@ header nav ul li i{
     }
     .apertura, .cierre{
         display: block;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .cierre{
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 15px;
     }
     header nav{
         position: fixed;
@@ -172,5 +172,10 @@ header nav ul li i{
     }
     .integrantes{
         grid-template-columns: repeat(1, auto);
+    }
+}
+@media screen and (max-width:500px){
+    header nav{
+        width: calc(60% - 40px);
     }
 }

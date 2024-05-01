@@ -126,7 +126,8 @@ header nav ul li i{
     left: 15px;
 }
 .derecha:hover, .izquierda:hover{
-    background-color: var(--azul);
+    background-color: var(--naranja);
+    color: var(--negro);
 }
 h3{
     font-size: 1.8rem;
@@ -267,19 +268,18 @@ footer .apartados .rrss i{
     }
     .apertura, .cierre{
         display: block;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .cierre{
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 15px;
     }
     header nav{
         position: fixed;
         top: 0;
         left: -100vw;
         padding: 20px;
-        background-color: var(--negro);
         width:calc(50% - 40px);
         height: calc(100vh - 40px);
         background-color: var(--naranja);
@@ -320,11 +320,21 @@ footer .apartados .rrss i{
         margin-bottom: 20px;
     }
     .contenedorSlider button{
-        background-color: var(--azul);
+        background-color: var(--naranja);
+        color: var(--negro);
     }
 }
 @media screen and (max-width:500px){
     .contenedorSlider{
         height: 400px;
+    }
+    header nav{
+        width: calc(60% - 40px);
+    }
+    .contenedorSlider button{
+        top: 35%;
+        width: 50px;
+        height: 50px;
+        font-size: 2.5rem;
     }
 }

@@ -137,7 +137,7 @@ header nav ul li i{
     border-radius: 20px;
 }
 .anterior:hover, .siguiente:hover{
-    background-color: var(--azul);
+    background-color: var(--naranja);
 }
 .anterior{
     left: 0;
@@ -168,12 +168,12 @@ header nav ul li i{
     }
     .apertura, .cierre{
         display: block;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .cierre{
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 15px;
     }
     header nav{
         position: fixed;
@@ -209,6 +209,12 @@ header nav ul li i{
         margin-left: 5px;
     }
 }
+@media screen and (max-width:800px){
+    .comprarEdiciones button{
+        background-color: transparent;
+        padding: 0;
+    }
+}
 @media screen and (max-width:500px){
     .periodicos h4{
         font-size: 1.2rem;
@@ -217,8 +223,10 @@ header nav ul li i{
         font-size: 1.1rem;
         padding: 5px;
     }
-    .anterior, .siguiente{
+    .comprarEdiciones button{
         font-size: 2rem;
-        padding: 0;
+    }
+    header nav{
+        width: calc(60% - 40px);
     }
 }
