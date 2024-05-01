@@ -102,15 +102,11 @@ header nav ul li i{
 }
 .periodicos{
     display: flex;
-    width: 134%;
+    justify-content: space-between;
 }
 .periodicos section{
-    width: calc(100% / 3 - 15%);
+    width: calc(100% / 4);
     text-align: center;
-    margin-left: 5%;
-}
-.periodicos section:nth-child(3){
-    margin-right: 5px;
 }
 .periodicos section h4{
     font-size: 1.4rem;
@@ -127,23 +123,6 @@ header nav ul li i{
 }
 .periodicos section img{
     width: 100%; 
-    display: block;
-}
-.anterior, .siguiente{
-    font-size: 2.5rem;
-    position: absolute;
-    top: 50%;
-    padding: 10px;
-    border-radius: 20px;
-}
-.anterior:hover, .siguiente:hover{
-    background-color: var(--naranja);
-}
-.anterior{
-    left: 0;
-}
-.siguiente{
-    right: 0;
 }
 .infoPeriodicos{
    width: 90%;
@@ -209,22 +188,9 @@ header nav ul li i{
         margin-left: 5px;
     }
 }
-@media screen and (max-width:800px){
-    .comprarEdiciones button{
-        background-color: transparent;
-        padding: 0;
-    }
-}
 @media screen and (max-width:500px){
     .periodicos h4{
         font-size: 1.2rem;
-    }
-    .periodicos section button{
-        font-size: 1.1rem;
-        padding: 5px;
-    }
-    .comprarEdiciones button{
-        font-size: 2rem;
     }
     header nav{
         width: calc(60% - 40px);
