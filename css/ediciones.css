@@ -94,7 +94,7 @@ header nav ul li i{
     margin-bottom: 20px;
 }
 .infoCompra h3{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 .infoCompra .carrito{
@@ -116,6 +116,10 @@ header nav ul li i{
     font-size: 1.2rem;
     font-weight: 600;
     padding: 10px;
+    border: 2px solid var(--naranja);
+    border-radius: 5px;;
+}
+.periodicos section button:hover{
     background-color: var(--naranja);
 }
 .periodicos section i{
@@ -129,7 +133,7 @@ header nav ul li i{
    margin: 20px auto; 
 }
 .infoPeriodicos h3{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 15px;
 }
 .infoPeriodicos p{
@@ -186,6 +190,12 @@ header nav ul li i{
     }
     header nav ul li:nth-child(5), header nav ul li:nth-child(6){
         margin-left: 5px;
+    }
+}
+@media screen and (max-width:800px){
+    .periodicos section button{
+        background-color: var(--naranja);
+        border: none;
     }
 }
 @media screen and (max-width:500px){
