@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+
+/*reglas generales*/
+
 :root{
     font-size: 14px;
     --naranja: #F3AD41;
@@ -19,6 +22,9 @@ button, input{
     background-color: transparent;
     font-family: "Montserrat", sans-serif;
 }
+
+/*header*/
+
 .descripcion{
     background-color: var(--azul);
     padding: 30px;
@@ -35,7 +41,7 @@ button, input{
     font-weight: 500;
 }
 .apertura, .cierre{
-    display: none;
+    display: none; /*para que no se vean hasta que se diga lo contrario en el media querie*/
 }
 .logo{
     display: flex;
@@ -66,6 +72,7 @@ header nav ul li a{
 header nav ul li a:hover{
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none;
+    /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
 header nav ul li img{
     width: 50px;
@@ -80,13 +87,16 @@ header nav ul li i{
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
+
+/*slider*/
+
 .contenedorSlider{
     position: relative;
     overflow: hidden;
     height: 550px;
 }
 .slider{
-    width: 400%;
+    width: 400%; /*para que cada imagen ocupe el 100% del ancho*/
     display: flex;
     height: 100%;
 }
@@ -129,6 +139,9 @@ header nav ul li i{
     background-color: var(--naranja);
     color: var(--negro);
 }
+
+/*Clasificación*/
+
 h3{
     font-size: 1.8rem;
     margin: 20px 0 15px 35px;
@@ -194,6 +207,9 @@ h3{
 .descenso tbody tr:nth-child(6){
     border-bottom: none;
 }
+
+/*Newsletter*/ 
+
 .newsletter{
     background: url("../img/foto.news.jpeg") no-repeat;
     background-size: cover;
@@ -227,10 +243,13 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: var(--naranja);
 }
+
+/*Footer*/
+
 footer{
     background-color: var(--naranja);
     padding: 20px;
-    border-top: 1px solid black;
+    border-top: 1px solid var(--negro);
     margin-top: 20px;
 }
 footer .apartados{
@@ -254,7 +273,7 @@ footer .apartados ul li:not(:last-child){
 }
 footer .apartados .enlaces a, footer .apartados .rrss a{
     text-decoration: none;
-    color: black;
+    color: var(--negro);
 }
 footer .apartados .rrss i{
     font-size: 25px;
@@ -262,6 +281,7 @@ footer .apartados .rrss i{
 .derechos p{
     text-align: center;
 }
+
 @media screen and (max-width:900px){
     .descripcion h2{
         display: none;
@@ -284,7 +304,7 @@ footer .apartados .rrss i{
         height: calc(100vh - 40px);
         background-color: var(--naranja);
         transition: left 1s;
-        z-index: 1;
+        z-index: 1; /*para que se ponga por encima*/
     }
     .desplegado{
         left: 0;
@@ -314,27 +334,32 @@ footer .apartados .rrss i{
         align-items: center;
     }
     .europa, .descenso{
-        width: calc(100% - 40px) ;
+        width: calc(100% - 40px); /*para que ocupe todo el ancho ambas clasificaciones*/
     }
     .europa{
         margin-bottom: 20px;
     }
     .contenedorSlider button{
+        /*eliminar el hover*/
         background-color: var(--naranja);
         color: var(--negro);
     }
     input[type="submit"]{
+        /*quitar el hover*/
         background-color: var(--naranja);
     }
 }
 @media screen and (max-width:500px){
     .contenedorSlider{
+        /*modificar el tamaño para dispositivos móviles*/
         height: 300px;
     }
     header nav{
+        /*hacer el menú más grande para que no quede tan pegado*/
         width: calc(60% - 40px);
     }
     .contenedorSlider button{
+        /*hacer los botones más pequeños y echarlos más para arriba para que no estén tan pegados a la información*/
         top: 35%;
         width: 50px;
         height: 50px;
