@@ -27,3 +27,20 @@ opciones.forEach((link) => {
     }
 })
 
+const botonesComprar = document.querySelectorAll(".periodicos section button");
+const carrito = document.querySelector(".numero p");
+
+let numeroCompras = 0;
+carrito.innerText = numeroCompras;
+
+const maxCompras = 9;
+
+botonesComprar.forEach((boton) =>{
+    boton.addEventListener("click", () => {
+        carrito.classList.add("activo");
+        if(numeroCompras < maxCompras){
+            numeroCompras++;
+            carrito.innerText = numeroCompras;
+        }
+    })
+})
