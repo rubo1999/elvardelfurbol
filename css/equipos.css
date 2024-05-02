@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+
+/*reglas generales*/
+
 :root{
     font-size: 14px;
     --naranja: #F3AD41;
@@ -19,6 +22,9 @@ button{
     background-color: transparent;
     font-family: "Montserrat", sans-serif;
 }
+
+/*header*/
+
 .descripcion{
     background-color: var(--azul);
     padding: 30px;
@@ -65,7 +71,7 @@ header nav ul li a{
 }
 header nav ul li a:hover{
     text-decoration: underline 3px solid var(--azul);
-    text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;/*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
 header nav ul li img{
     width: 50px;
@@ -75,14 +81,14 @@ header nav ul li i{
     font-size: 30px;
     margin-right: 10px;
 }
-.seleccionado{
+.seleccionado{/*clase para que se active al hacer click en cada uno de los enlaces del nav*/
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
-.click{
-    background-color: var(--verde);
-}
+
+/*Slider noticias y próximos partidos*/
+
 .contenedorPrincipal{
     width: 90%;
     display: flex;
@@ -90,6 +96,8 @@ header nav ul li i{
     justify-content: space-around;
     height: 500px;
 }
+ /*Slider noticias*/
+
 .contenedorNoticias{
     width: 65%;
     overflow: hidden;
@@ -98,7 +106,7 @@ header nav ul li i{
 }
 .contenedorNoticias .noticias{
     display: flex;
-    width: 300%;
+    width: 300%;/*para que cada imagen ocupe el 100% del ancho*/
     height: 100%;
 }
 .contenedorNoticias .noticias section{
@@ -140,6 +148,9 @@ header nav ul li i{
 .siguiente{
     right: 10px;
 }
+
+/*Próximos partidos*/
+
 .partidos{
     width: 25%;
 }
@@ -170,6 +181,9 @@ header nav ul li i{
     display: flex;
     justify-content: center;
 }
+
+/*Noticias finales de los equipos*/
+
 .conjuntoNoticias{
     padding: 10px;
 }
@@ -222,6 +236,7 @@ header nav ul li i{
         display: none;
     }
     .apertura, .cierre{
+        /*hacer visibles los botones del menú*/
         display: block;
         font-size: 2.5rem;
     }
@@ -241,8 +256,8 @@ header nav ul li i{
         width:calc(50% - 40px);
         height: calc(100vh - 40px);
         background-color: var(--naranja);
-        transition: left 1s;
-        z-index: 1;
+        transition: left 1s; /*hacer el efecto desde fuera hacia dentro*/
+        z-index: 1; /*para que se ponga por encima*/
     }
     .desplegado{
         left: 0;
@@ -266,16 +281,18 @@ header nav ul li i{
         margin-left: 5px;
     }
     .contenedorPrincipal{
-        flex-direction: column-reverse;
+        flex-direction: column-reverse; /*para hacer que se vea primeramente los próximos partidos y después la slider*/
     }
     .contenedorPrincipal .contenedorNoticias{
+        /*hacer que el contenedor de la slider ocupe el 100%*/
         width: 100%;
         height: 100%
     }
     .partidos{
+        /*hacer que los próximos partidos ocupen todo el ancho con los cuatro partidos uno al lado del otro*/
         width: 100%;
         display: grid;
-        grid-template-rows: repeat(1, auto);
+        grid-template-columns: repeat(4,auto);
         justify-content: space-between;
     }
     .partidos section p:last-child{
@@ -285,31 +302,35 @@ header nav ul li i{
         display: none;
     }
     .noticiasEquipo{
+        /*hacer que las noticias finales tengan dos columnas*/
         grid-template-columns: repeat(2,auto);
-    }.partidos{
-        grid-template-columns: repeat(4,auto);
     }
 }
 @media screen and (max-width:800px){
     .contenedorNoticias button{
+        /*quitar el hover del boton de la slider*/
         background-color: var(--naranja);
         color: var(--negro);
     }
 }
 @media screen and (max-width:600px){
-    .noticiasEquipo{
-        grid-template-columns: repeat(1,auto);
-    }
     .partidos{
+        /*hacer que los próximos partidos se vean en dos columnas*/
         grid-template-columns: repeat(2, auto);
         justify-content: space-around;
+    }
+    .noticiasEquipo{
+        /*hacer que las noticias finales solamente tengan una columna*/
+        grid-template-columns: repeat(1,auto);
     }
 }
 @media screen and (max-width:500px){
     header nav{
+        /*hacer el menú más grande en dispositivos móviles para que no quede tan pegado*/
         width: calc(60% - 40px);
     }
     .contenedorNoticias button{
+        /*hacer los botones más pequeños y echarlos más para arriba para que no estén tan pegados a la información*/
         top: 35%;
         width: 50px;
         height: 50px;

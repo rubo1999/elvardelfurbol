@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
+/*Reglas generales*/
 :root{
     font-size: 14px;
     --naranja: #F3AD41;
@@ -20,6 +22,9 @@ button{
     font-family: "Montserrat", sans-serif;
     cursor: pointer;
 }
+
+/*Header*/
+
 .descripcion{
     background-color: var(--azul);
     padding: 30px;
@@ -66,7 +71,7 @@ header nav ul li a{
 }
 header nav ul li a:hover{
     text-decoration: underline 3px solid var(--azul);
-    text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;/*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
 header nav ul li img{
     width: 50px;
@@ -76,11 +81,14 @@ header nav ul li i{
     font-size: 30px;
     margin-right: 10px;
 }
-.seleccionado{
+.seleccionado{ /*clase para que se active al hacer click en cada uno de los enlaces del nav*/
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
+
+/*Compra de periódicos*/
+
 .comprarEdiciones{
     width: 90%;
     margin: 0 auto;
@@ -118,6 +126,7 @@ header nav ul li i{
     display: none;
 }
 .numero .activo{
+    /*clase para activar al hacer click en el boton comprar para que aparezca en el carrito*/
     display: block;
 }
 .periodicos{
@@ -148,6 +157,9 @@ header nav ul li i{
 .periodicos section img{
     width: 100%; 
 }
+
+/*Información general de las ediciones de los periódicos*/
+
 .infoPeriodicos{
    width: 90%;
    margin: 20px auto; 
@@ -162,6 +174,7 @@ header nav ul li i{
 .infoPeriodicos p:not(:last-child){
     margin-bottom: 10px;
 }
+
 @media screen and (max-width:900px){
     header{
         margin-bottom: 15px;
@@ -170,6 +183,7 @@ header nav ul li i{
         display: none;
     }
     .apertura, .cierre{
+        /*hacer visibles los botones del menú*/
         display: block;
         font-size: 2.5rem;
     }
@@ -187,8 +201,8 @@ header nav ul li i{
         width:calc(50% - 40px);
         height: calc(100vh - 40px);
         background-color: var(--naranja);
-        transition: left 1s;
-        z-index: 1;
+        transition: left 1s; /*hacer el efecto desde fuera hacia dentro*/
+        z-index: 1; /*para que se ponga por encima*/
     }
     .desplegado{
         left: 0;
@@ -212,12 +226,15 @@ header nav ul li i{
         margin-left: 5px;
     }
 }
+
 @media screen and (max-width:800px){
     .periodicos section button{
+        /*quitar el hover de los botones de comprar los peródicos*/
         background-color: var(--naranja);
         border: none;
     }
 }
+
 @media screen and (max-width:500px){
     .periodicos section button{
         padding: 5px;
@@ -226,6 +243,7 @@ header nav ul li i{
         font-size: 1.2rem;
     }
     header nav{
+        /*hacer el menú más grande en dispositivos móviles para que no quede tan pegado*/
         width: calc(60% - 40px);
     }
 }

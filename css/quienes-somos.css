@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+
+/*reglas generales*/
+
 :root{
     font-size: 14px;
     --naranja: #F3AD41;
@@ -19,6 +22,9 @@ button{
     background-color: transparent;
     font-family: "Montserrat", sans-serif;
 }
+
+/*header*/
+
 .descripcion{
     background-color: var(--azul);
     padding: 30px;
@@ -65,7 +71,7 @@ header nav ul li a{
 }
 header nav ul li a:hover{
     text-decoration: underline 3px solid var(--azul);
-    text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;/*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
 header nav ul li img{
     width: 50px;
@@ -75,11 +81,14 @@ header nav ul li i{
     font-size: 30px;
     margin-right: 10px;
 }
-.seleccionado{
+.seleccionado{ /*clase para que se active al hacer click en cada uno de los enlaces del nav*/
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
+
+/*Quiénes somos, descripción de Elvardelfurbol*/
+
 .quienesSomos{
     width: 90%;
     margin: 0 auto;
@@ -97,7 +106,11 @@ header nav ul li i{
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
+
+/*Integrantes, descripción de cada uno de los miembros del canal*/
+
 .integrantes{
+    /*hacer que los miembros del canal se destribuyan en tres columnas*/
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 30px;
@@ -117,11 +130,14 @@ header nav ul li i{
     height: 100px;
     margin-right: 20px;
 }
+
 @media screen and (max-width: 1200px){
     .integrantes{
+        /*hacer que los miembros del canal se destribuyan en dos columnas*/
         grid-template-columns: repeat(2, auto);
     }
 }
+
 @media screen and (max-width:900px){
     header{
         margin-bottom: 15px;
@@ -130,6 +146,7 @@ header nav ul li i{
         display: none;
     }
     .apertura, .cierre{
+        /*hacer visibles los botones del menú*/
         display: block;
         font-size: 2.5rem;
     }
@@ -147,8 +164,8 @@ header nav ul li i{
         width:calc(50% - 40px);
         height: calc(100vh - 40px);
         background-color: var(--naranja);
-        transition: left 1s;
-        z-index: 1;
+        transition: left 1s; /*hacer el efecto desde fuera hacia dentro*/
+        z-index: 1; /*para que se ponga por encima*/
     }
     .desplegado{
         left: 0;
@@ -172,11 +189,14 @@ header nav ul li i{
         margin-left: 5px;
     }
     .integrantes{
+        /*hacer que los miembros del canal se destribuyan en una columna*/
         grid-template-columns: repeat(1, auto);
     }
 }
+
 @media screen and (max-width:500px){
     header nav{
+        /*hacer el menú más grande en dispositivos móviles para que no quede tan pegado*/
         width: calc(60% - 40px);
     }
 }

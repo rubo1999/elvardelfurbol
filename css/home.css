@@ -82,7 +82,7 @@ header nav ul li i{
     font-size: 30px;
     margin-right: 10px;
 }
-.seleccionado{
+.seleccionado{ /*clase para que se active al hacer click a cada uno de los enlaces del nav*/
     text-decoration: underline 3px solid var(--azul);
     text-decoration-skip-ink: none; 
     /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
@@ -287,6 +287,7 @@ footer .apartados .rrss i{
         display: none;
     }
     .apertura, .cierre{
+        /*hacer visibles los botones del menú*/
         display: block;
         font-size: 2.5rem;
     }
@@ -303,7 +304,7 @@ footer .apartados .rrss i{
         width:calc(50% - 40px);
         height: calc(100vh - 40px);
         background-color: var(--naranja);
-        transition: left 1s;
+        transition: left 1s; /*hacer el efecto desde fuera hacia dentro*/
         z-index: 1; /*para que se ponga por encima*/
     }
     .desplegado{
@@ -330,6 +331,7 @@ footer .apartados .rrss i{
 }
 @media screen and (max-width:800px){
     .datos{
+        /*hacer que las clasificaciones se vean una debajo de la otra*/
         flex-direction: column;
         align-items: center;
     }
@@ -340,22 +342,22 @@ footer .apartados .rrss i{
         margin-bottom: 20px;
     }
     .contenedorSlider button{
-        /*eliminar el hover*/
+        /*eliminar el hover de los botones de la slider*/
         background-color: var(--naranja);
         color: var(--negro);
     }
     input[type="submit"]{
-        /*quitar el hover*/
+        /*quitar el hover dle input*/
         background-color: var(--naranja);
     }
 }
 @media screen and (max-width:500px){
     .contenedorSlider{
-        /*modificar el tamaño para dispositivos móviles*/
+        /*modificar el tamaño de la slider para dispositivos móviles*/
         height: 300px;
     }
     header nav{
-        /*hacer el menú más grande para que no quede tan pegado*/
+        /*hacer el menú más grande en dispositivos móviles para que no quede tan pegado*/
         width: calc(60% - 40px);
     }
     .contenedorSlider button{
