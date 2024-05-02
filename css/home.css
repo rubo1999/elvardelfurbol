@@ -323,6 +323,9 @@ footer .apartados .rrss i{
         background-color: var(--naranja);
         color: var(--negro);
     }
+    input[type="submit"]{
+        background-color: var(--naranja);
+    }
 }
 @media screen and (max-width:500px){
     .contenedorSlider{
