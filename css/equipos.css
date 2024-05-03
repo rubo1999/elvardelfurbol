@@ -65,13 +65,13 @@ header nav ul li{
 }
 header nav ul li a{
     text-decoration: none;
-    color: black;
+    color: var(--negro);
     font-size: 1.1rem;
     font-weight: 400;
 }
 header nav ul li a:hover{
     text-decoration: underline 3px solid var(--azul);
-    text-decoration-skip-ink: none;/*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
+    text-decoration-skip-ink: none; /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
 header nav ul li img{
     width: 50px;
@@ -83,8 +83,7 @@ header nav ul li i{
 }
 .seleccionado{/*clase para que se active al hacer click en cada uno de los enlaces del nav*/
     text-decoration: underline 3px solid var(--azul);
-    text-decoration-skip-ink: none; 
-    /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
+    text-decoration-skip-ink: none; /*propiedad para que no se superponga el subrayado con la opción "quiénes somos"*/
 }
 
 /*Slider noticias y próximos partidos*/
