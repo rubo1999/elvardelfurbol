@@ -95,8 +95,8 @@ header nav ul li i{
 }
 .slider{
     width: 400%; /*para que cada imagen ocupe el 100% del ancho*/
-    display: flex;
     height: 100%;
+    display: flex;
 }
 .slider section{
     width: 100%;
@@ -334,7 +334,7 @@ footer .apartados .rrss i{
         align-items: center;
     }
     .europa, .descenso{
-        width: calc(100% - 40px); /*para que ocupe todo el ancho ambas clasificaciones*/
+        width: calc(100% - 40px); /*para que ocupen todo el ancho ambas clasificaciones*/
     }
     .europa{
         margin-bottom: 20px;

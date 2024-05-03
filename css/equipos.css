@@ -90,17 +90,17 @@ header nav ul li i{
 
 .contenedorPrincipal{
     width: 90%;
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-around;
     height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }
  /*Slider noticias*/
 
 .contenedorNoticias{
     width: 65%;
-    overflow: hidden;
     height: 100%;
+    overflow: hidden;
     position: relative;
 }
 .contenedorNoticias .noticias{
