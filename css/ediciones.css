@@ -134,7 +134,7 @@ header nav ul li i{
     justify-content: space-between;
 }
 .periodicos section{
-    width: calc(110% / 4);
+    width: 30%; /*quiero que cada sección ocupe el 30% del contenedor y de esta forma haya una separación entre todas*/
     text-align: center;
 }
 .periodicos section h4{
@@ -237,6 +237,7 @@ header nav ul li i{
 
 @media screen and (max-width:500px){
     .periodicos section button{
+        /*hacer más pequeño los botones de comprar disminuyendo el padding*/
         padding: 5px;
     }
     .periodicos h4{
