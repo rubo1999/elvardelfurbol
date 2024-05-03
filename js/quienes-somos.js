@@ -18,7 +18,7 @@ const opciones = document.querySelectorAll("header nav ul li a");
 //Función para aplicar el subrayado
 function click(link) {
     opciones.forEach((i) => i.classList.remove("seleccionado")); //Elimina el subrayado de todos los enlaces
-    link.classList.add("seleccionado");//Aplica el subrayado al enlace clicado
+    link.classList.add("seleccionado"); //Aplica el subrayado al enlace clicado
 }
 
 //Configuración del evento de click para cada enlace
@@ -31,6 +31,6 @@ const currentURL = window.location.pathname; //Obtención de la ruta de la URL a
 opciones.forEach((link) => {
     const href = link.getAttribute("href");
     if(currentURL.includes(href)){
-        link.classList.add("seleccionado");//Aplica el subrayado según la URL actual
+        link.classList.add("seleccionado"); //Aplica el subrayado según la URL actual
     }
 })

@@ -20,7 +20,7 @@ function click(link) {
     link.classList.add("seleccionado");//Aplica el subrayado al enlace clicado
 }
 
-//Configuración del evento de click para cada enlace
+//Configuración del evento click para cada enlace
 opciones.forEach((link) => {
     link.addEventListener("click", () => click(link)); //Se aplica el subrayado al hacer click
 })
@@ -74,6 +74,16 @@ function desplazarDerecha(){
     }
 }
 
+function movimiento(){
+    //Función para desplazar la slider según el valor de operación
+    slider.style.transform = `translate(-${operacion}%)`;
+}
+
+function transicion(){
+    //Función que determina el suave desplazamiento de la slider
+    slider.style.transition = "ease 1s";
+}
+
 botonIzqda.addEventListener("click", () => desplazarIzquierda());//Evento para mover a la izquierda
 botonDcha.addEventListener("click", () => desplazarDerecha());//Evento para mover a la derecha
 
@@ -81,12 +91,3 @@ setInterval(() => {
     //Implementar el desplazamiento automáticamente hacia la derecha cada cuatro segundos
     desplazarDerecha();
 }, 4000);
-
-function movimiento(){
-    //Función para desplazar la slider según el valor de operación
-    slider.style.transform = `translate(-${operacion}%)`;
-}
-function transicion(){
-    //Función que determina el suave desplazamiento de la slider
-    slider.style.transition = "ease 1s";
-}

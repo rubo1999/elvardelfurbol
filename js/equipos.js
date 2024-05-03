@@ -73,13 +73,6 @@ function desplazarDerecha(){
     }
 }
 
-setInterval(() => {
-    desplazarDerecha();
-}, 4000)
-
-anterior.addEventListener("click", () => desplazarIzquierda()); //Evento para mover a la izquierda
-siguiente.addEventListener("click", () => desplazarDerecha()); //Evento para mover a la derecha
-
 function movimiento(){
     //Función para desplazar la slider según el valor de operación
     carrusel.style.transform = `translate(-${operacion}%)`;
@@ -89,3 +82,10 @@ function transicion(){
     //Función que determina el suave desplazamiento de la slider
     carrusel.style.transition = "ease 1s";
 }
+
+anterior.addEventListener("click", () => desplazarIzquierda()); //Evento para mover a la izquierda
+siguiente.addEventListener("click", () => desplazarDerecha()); //Evento para mover a la derecha
+
+setInterval(() => {
+    desplazarDerecha();
+}, 4000)
